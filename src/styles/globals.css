@@ -37,24 +37,24 @@ body {
 @layer components {
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-600 text-sm
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-semibold text-sm
            bg-brand-green text-brand-bg transition-all duration-150
            hover:bg-opacity-90 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-500 text-sm
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-medium text-sm
            bg-transparent text-brand-text border border-brand-border transition-all duration-150
            hover:border-brand-border-hi hover:bg-brand-panel active:scale-[0.98];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-display font-500 text-sm
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-display font-medium text-sm
            text-brand-dim transition-all duration-150 hover:text-brand-text hover:bg-brand-panel;
   }
 
   .btn-danger {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-500 text-sm
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-medium text-sm
            bg-brand-red bg-opacity-10 text-brand-red border border-brand-red border-opacity-20
            transition-all duration-150 hover:bg-opacity-20 active:scale-[0.98];
   }
@@ -77,19 +77,19 @@ body {
   }
 
   .input-label {
-    @apply block text-xs font-display font-500 text-brand-dim uppercase tracking-wider mb-2;
+    @apply block text-xs font-display font-medium text-brand-dim uppercase tracking-wider mb-2;
   }
 
   /* Status badges */
-  .badge-green  { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-500 bg-brand-green bg-opacity-10 text-brand-green; }
-  .badge-red    { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-500 bg-brand-red bg-opacity-10 text-brand-red; }
-  .badge-amber  { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-500 bg-brand-amber bg-opacity-10 text-brand-amber; }
-  .badge-purple { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-500 bg-brand-purple bg-opacity-10 text-brand-purple; }
-  .badge-dim    { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-500 bg-brand-border text-brand-dim; }
+  .badge-green  { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-green bg-opacity-10 text-brand-green; }
+  .badge-red    { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-red bg-opacity-10 text-brand-red; }
+  .badge-amber  { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-amber bg-opacity-10 text-brand-amber; }
+  .badge-purple { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-purple bg-opacity-10 text-brand-purple; }
+  .badge-dim    { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-border text-brand-dim; }
 
   /* Section label */
   .section-label {
-    @apply text-xs font-display font-500 text-brand-muted uppercase tracking-widest;
+    @apply text-xs font-display font-medium text-brand-muted uppercase tracking-widest;
   }
 
   /* Progress bar */
