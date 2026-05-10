@@ -20,14 +20,14 @@ export function HookSlider() {
 
   return (
     <div className="card-surface max-w-2xl mx-auto text-left">
-      <p className="font-display font-600 text-brand-bright text-lg mb-6">
+      <p className="font-display font-semibold text-brand-bright text-lg mb-6">
         How many trades did you close early last month?
       </p>
 
       <div className="mb-6">
         <div className="flex justify-between text-xs text-brand-muted mb-3 font-mono">
           <span>0</span>
-          <span className="font-600 text-2xl text-brand-bright font-display">{value === 20 ? '20+' : value}</span>
+          <span className="font-semibold text-2xl text-brand-bright font-display">{value === 20 ? '20+' : value}</span>
           <span>20+</span>
         </div>
         <input

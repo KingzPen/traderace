@@ -30,7 +30,7 @@ export default function LandingPage() {
                 <path d="M1 7h9M7 3l5 4-5 4" stroke="#07090C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-display font-700 text-brand-bright text-lg tracking-tight">TradeRace</span>
+            <span className="font-display font-bold text-brand-bright text-lg tracking-tight">TradeRace</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-brand-dim">
             <a href="#features" className="animated-link hover:text-brand-text transition-colors">Features</a>
@@ -60,7 +60,7 @@ export default function LandingPage() {
               Live on real MT5 price data
             </div>
 
-            <h1 className="font-display font-800 text-5xl md:text-7xl text-brand-bright leading-[1.05] tracking-tight mb-6">
+            <h1 className="font-display font-extrabold text-5xl md:text-7xl text-brand-bright leading-[1.05] tracking-tight mb-6">
               Stop staring at{' '}
               <span className="text-brand-green">the chart.</span>
             </h1>
@@ -101,7 +101,7 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <p className="section-label mb-3">Live demo</p>
-            <h2 className="font-display font-700 text-3xl md:text-4xl text-brand-bright mb-4">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-bright mb-4">
               Your trade, right now
             </h2>
             <p className="text-brand-dim max-w-xl mx-auto">
@@ -131,7 +131,7 @@ export default function LandingPage() {
                 <path d="M1 7h9M7 3l5 4-5 4" stroke="#07090C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-display font-600 text-brand-bright text-sm">TradeRace</span>
+            <span className="font-display font-semibold text-brand-bright text-sm">TradeRace</span>
           </div>
           <p className="text-xs text-brand-muted">Trading involves risk. TradeRace is a psychology tool, not financial advice.</p>
           <div className="flex gap-4 text-xs text-brand-muted">

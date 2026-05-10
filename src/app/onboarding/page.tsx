@@ -47,7 +47,7 @@ export default function OnboardingPage() {
                   <path d="M1 7h9M7 3l5 4-5 4" stroke="#07090C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <span className="font-display font-700 text-brand-bright">TradeRace</span>
+              <span className="font-display font-bold text-brand-bright">TradeRace</span>
             </div>
             <span className="text-xs text-brand-muted font-mono">Step {stepIndex + 1} of {STEPS.length}</span>
           </div>

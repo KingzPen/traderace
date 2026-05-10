@@ -16,8 +16,8 @@ export function WelcomeStep({ onNext }: { onNext: (type: TraderType) => void }) 
   return (
     <div>
       <div className="mb-8">
-        <p className="text-brand-green text-xs font-display font-500 uppercase tracking-widest mb-3">Step 1 — Welcome</p>
-        <h2 className="font-display font-700 text-3xl text-brand-bright mb-3">
+        <p className="text-brand-green text-xs font-display font-medium uppercase tracking-widest mb-3">Step 1 — Welcome</p>
+        <h2 className="font-display font-bold text-3xl text-brand-bright mb-3">
           What kind of trader are you?
         </h2>
         <p className="text-brand-dim leading-relaxed">
@@ -36,7 +36,7 @@ export function WelcomeStep({ onNext }: { onNext: (type: TraderType) => void }) 
           >
             <div className="text-2xl">{t.icon}</div>
             <div className="flex-1">
-              <div className="font-display font-600 text-brand-bright text-sm">{t.label}</div>
+              <div className="font-display font-semibold text-brand-bright text-sm">{t.label}</div>
               <div className="text-xs text-brand-muted mt-0.5">{t.sub}</div>
             </div>
             {selected === t.value && (

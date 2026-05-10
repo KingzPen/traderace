@@ -307,7 +307,7 @@ export function DemoRaceEmbed() {
         <div className="flex gap-2">
           {SYMBOLS.map(s => (
             <button key={s} onClick={() => setSymbol(s)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-500 transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all ${
                 symbol === s ? 'bg-brand-purple text-white' : 'bg-brand-bg text-brand-dim border border-brand-border hover:border-brand-border-hi'
               }`}>{s}</button>
           ))}
@@ -315,16 +315,16 @@ export function DemoRaceEmbed() {
         <div className="flex gap-2">
           {(['bull','chop','bear'] as Scenario[]).map(sc => (
             <button key={sc} onClick={() => setScenario(sc)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-500 transition-all capitalize ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all capitalize ${
                 scenario === sc ? 'bg-brand-surface border border-brand-border-hi text-brand-text' : 'text-brand-muted hover:text-brand-dim'
               }`}>{sc === 'bull' ? '📈' : sc === 'chop' ? '〰' : '📉'} {sc}</button>
           ))}
           <button onClick={() => setPaused(p => !p)}
-            className="px-3 py-1.5 rounded-lg text-xs font-500 text-brand-muted hover:text-brand-dim transition-all">
+            className="px-3 py-1.5 rounded-lg text-xs font-medium text-brand-muted hover:text-brand-dim transition-all">
             {paused ? '▶ Resume' : '⏸ Pause'}
           </button>
           <button onClick={reset}
-            className="px-3 py-1.5 rounded-lg text-xs font-500 text-brand-muted hover:text-brand-dim transition-all">
+            className="px-3 py-1.5 rounded-lg text-xs font-medium text-brand-muted hover:text-brand-dim transition-all">
             ↺ Reset
           </button>
         </div>
@@ -340,7 +340,7 @@ export function DemoRaceEmbed() {
         ].map(s => (
           <div key={s.label} className="bg-brand-bg rounded-lg p-3 text-center">
             <div className="text-xs text-brand-muted font-display uppercase tracking-wider mb-1">{s.label}</div>
-            <div className={`font-mono font-500 text-base ${s.color || 'text-brand-bright'}`}>{s.val}</div>
+            <div className={`font-mono font-medium text-base ${s.color || 'text-brand-bright'}`}>{s.val}</div>
           </div>
         ))}
       </div>

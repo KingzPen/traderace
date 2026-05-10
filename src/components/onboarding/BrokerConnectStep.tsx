@@ -77,8 +77,8 @@ export function BrokerConnectStep({ onNext, onSkip }: Props) {
               <path d="M5 12l5 5L20 7" stroke="#00E5A0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <p className="text-brand-green text-xs font-display font-500 uppercase tracking-widest mb-2">Connected</p>
-          <h2 className="font-display font-700 text-3xl text-brand-bright mb-3">MT5 linked</h2>
+          <p className="text-brand-green text-xs font-display font-medium uppercase tracking-widest mb-2">Connected</p>
+          <h2 className="font-display font-bold text-3xl text-brand-bright mb-3">MT5 linked</h2>
           <p className="text-brand-dim">Your broker is now connected. TradeRace will automatically detect open trades.</p>
         </div>
 
@@ -109,8 +109,8 @@ export function BrokerConnectStep({ onNext, onSkip }: Props) {
   return (
     <div>
       <div className="mb-8">
-        <p className="text-brand-green text-xs font-display font-500 uppercase tracking-widest mb-3">Step 2 — Connect broker</p>
-        <h2 className="font-display font-700 text-3xl text-brand-bright mb-3">
+        <p className="text-brand-green text-xs font-display font-medium uppercase tracking-widest mb-3">Step 2 — Connect broker</p>
+        <h2 className="font-display font-bold text-3xl text-brand-bright mb-3">
           Link your MT5 account
         </h2>
         <p className="text-brand-dim leading-relaxed text-sm">
@@ -132,7 +132,7 @@ export function BrokerConnectStep({ onNext, onSkip }: Props) {
                   : 'border-brand-border bg-brand-surface text-brand-muted hover:border-brand-border-hi'
               }`}>
               <span>{p.icon}</span>
-              <span className="font-500">{p.label}</span>
+              <span className="font-medium">{p.label}</span>
             </button>
           ))}
         </div>

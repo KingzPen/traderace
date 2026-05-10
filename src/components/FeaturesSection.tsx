@@ -78,7 +78,7 @@ export function FeaturesSection() {
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-12">
         <p className="section-label mb-3">Why it works</p>
-        <h2 className="font-display font-700 text-3xl md:text-4xl text-brand-bright mb-4">
+        <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-bright mb-4">
           Built around the real problem
         </h2>
         <p className="text-brand-dim max-w-xl mx-auto">
@@ -95,7 +95,7 @@ export function FeaturesSection() {
               </div>
               <span className={f.tagColor}>{f.tag}</span>
             </div>
-            <h3 className="font-display font-600 text-brand-bright text-sm mb-2">{f.title}</h3>
+            <h3 className="font-display font-semibold text-brand-bright text-sm mb-2">{f.title}</h3>
             <p className="text-brand-dim text-sm leading-relaxed">{f.desc}</p>
           </div>
         ))}

@@ -270,7 +270,7 @@ export default function RacePage() {
         <div className="flex items-center gap-3">
           {live && (
             <>
-              <span className="font-display font-600 text-brand-bright">{live.symbol}</span>
+              <span className="font-display font-semibold text-brand-bright">{live.symbol}</span>
               <span className={`badge-${live.direction==='BUY'?'green':'red'} text-xs`}>{live.direction}</span>
             </>
           )}
@@ -293,7 +293,7 @@ export default function RacePage() {
           ].map(s => (
             <div key={s.label} className="text-center">
               <div className="text-xs text-brand-muted font-display uppercase tracking-wider mb-1">{s.label}</div>
-              <div className={`font-mono font-500 text-lg ${s.color||'text-brand-bright'}`}>{s.val}</div>
+              <div className={`font-mono font-medium text-lg ${s.color||'text-brand-bright'}`}>{s.val}</div>
             </div>
           ))}
         </div>
@@ -338,7 +338,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
           <span className="text-2xl">{won ? '🏆' : '💥'}</span>
         </div>
 
-        <h2 className="font-display font-700 text-2xl text-brand-bright text-center mb-1">
+        <h2 className="font-display font-bold text-2xl text-brand-bright text-center mb-1">
           {won ? 'Race won!' : 'Trade closed'}
         </h2>
         <p className="text-brand-dim text-sm text-center mb-8">
@@ -348,7 +348,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
         <div className="card space-y-6">
           {/* Q1 - Interference */}
           <div>
-            <p className="font-display font-500 text-brand-bright text-sm mb-3">Did you touch the trade while it was open?</p>
+            <p className="font-display font-medium text-brand-bright text-sm mb-3">Did you touch the trade while it was open?</p>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { val: 'none',          label: 'No — let it run' },
@@ -357,7 +357,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
                 { val: 'added',         label: 'Added position' },
               ].map(o => (
                 <button key={o.val} onClick={() => setInterference(o.val)}
-                  className={`py-2.5 px-3 rounded-lg text-xs font-500 border transition-all ${
+                  className={`py-2.5 px-3 rounded-lg text-xs font-medium border transition-all ${
                     interference === o.val ? 'border-brand-purple bg-brand-purple bg-opacity-10 text-brand-bright' : 'border-brand-border text-brand-muted hover:border-brand-border-hi'
                   }`}>{o.label}</button>
               ))}
@@ -366,7 +366,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
 
           {/* Q2 - Emotion */}
           <div>
-            <p className="font-display font-500 text-brand-bright text-sm mb-3">How did you feel during the trade?</p>
+            <p className="font-display font-medium text-brand-bright text-sm mb-3">How did you feel during the trade?</p>
             <div className="flex flex-wrap gap-2">
               {[
                 { val: 'calm',       label: '😌 Calm' },
@@ -377,7 +377,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
                 { val: 'fearful',    label: '😨 Fearful' },
               ].map(o => (
                 <button key={o.val} onClick={() => setEmotion(o.val)}
-                  className={`py-2 px-3 rounded-lg text-xs font-500 border transition-all ${
+                  className={`py-2 px-3 rounded-lg text-xs font-medium border transition-all ${
                     emotion === o.val ? 'border-brand-purple bg-brand-purple bg-opacity-10 text-brand-bright' : 'border-brand-border text-brand-muted hover:border-brand-border-hi'
                   }`}>{o.label}</button>
               ))}
@@ -386,7 +386,7 @@ function DebriefModal({ trade, onDone }: { trade: LiveTrade | null; onDone: () =
 
           {/* Q3 - Notes */}
           <div>
-            <p className="font-display font-500 text-brand-bright text-sm mb-2">Anything to note? (optional)</p>
+            <p className="font-display font-medium text-brand-bright text-sm mb-2">Anything to note? (optional)</p>
             <textarea value={notes} onChange={e => setNotes(e.target.value)} maxLength={280}
               placeholder="What would you do differently next time?"
               className="input resize-none h-20 text-xs leading-relaxed" />

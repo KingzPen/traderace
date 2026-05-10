@@ -66,16 +66,16 @@ export function PricingSection() {
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-12">
         <p className="section-label mb-3">Pricing</p>
-        <h2 className="font-display font-700 text-3xl md:text-4xl text-brand-bright mb-4">
+        <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-bright mb-4">
           Simple, transparent
         </h2>
         <div className="inline-flex items-center gap-3 p-1 bg-brand-surface border border-brand-border rounded-lg">
           <button onClick={() => setAnnual(false)}
-            className={`px-4 py-1.5 rounded-md text-sm font-500 transition-all ${!annual ? 'bg-brand-panel text-brand-bright shadow-sm' : 'text-brand-muted'}`}>
+            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${!annual ? 'bg-brand-panel text-brand-bright shadow-sm' : 'text-brand-muted'}`}>
             Monthly
           </button>
           <button onClick={() => setAnnual(true)}
-            className={`px-4 py-1.5 rounded-md text-sm font-500 transition-all ${annual ? 'bg-brand-panel text-brand-bright' : 'text-brand-muted'}`}>
+            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${annual ? 'bg-brand-panel text-brand-bright' : 'text-brand-muted'}`}>
             Annual <span className="text-brand-green text-xs ml-1">-20%</span>
           </button>
         </div>
@@ -97,9 +97,9 @@ export function PricingSection() {
             )}
 
             <div className="mb-6">
-              <h3 className="font-display font-600 text-brand-bright text-lg mb-1">{tier.name}</h3>
+              <h3 className="font-display font-semibold text-brand-bright text-lg mb-1">{tier.name}</h3>
               <div className="flex items-baseline gap-1 my-3">
-                <span className="font-display font-700 text-3xl text-brand-bright">
+                <span className="font-display font-bold text-3xl text-brand-bright">
                   ${annual ? tier.price.annual : tier.price.monthly}
                 </span>
                 {tier.price.monthly > 0 && (

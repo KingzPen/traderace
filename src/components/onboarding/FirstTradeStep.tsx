@@ -104,8 +104,8 @@ export function FirstTradeStep({ connection, onNext }: Props) {
   return (
     <div>
       <div className="mb-8">
-        <p className="text-brand-green text-xs font-display font-500 uppercase tracking-widest mb-3">Step 3 — First race</p>
-        <h2 className="font-display font-700 text-3xl text-brand-bright mb-3">
+        <p className="text-brand-green text-xs font-display font-medium uppercase tracking-widest mb-3">Step 3 — First race</p>
+        <h2 className="font-display font-bold text-3xl text-brand-bright mb-3">
           {openTrades.length > 0 ? 'Open trades detected' : 'Log your first trade'}
         </h2>
         <p className="text-brand-dim text-sm leading-relaxed">
@@ -125,8 +125,8 @@ export function FirstTradeStep({ connection, onNext }: Props) {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-display font-600 text-brand-bright">{trade.symbol}</span>
-                    <span className={`text-xs font-mono font-500 ${trade.direction === 'BUY' ? 'text-brand-green' : 'text-brand-red'}`}>
+                    <span className="font-display font-semibold text-brand-bright">{trade.symbol}</span>
+                    <span className={`text-xs font-mono font-medium ${trade.direction === 'BUY' ? 'text-brand-green' : 'text-brand-red'}`}>
                       {trade.direction}
                     </span>
                     <span className="dot-live" />
@@ -168,7 +168,7 @@ export function FirstTradeStep({ connection, onNext }: Props) {
             <div className="flex gap-2">
               {(['BUY','SELL'] as const).map(d => (
                 <button key={d} type="button" onClick={() => setDir(d)}
-                  className={`flex-1 py-3 rounded-lg text-sm font-display font-500 border transition-all ${
+                  className={`flex-1 py-3 rounded-lg text-sm font-display font-medium border transition-all ${
                     direction === d
                       ? d === 'BUY'
                         ? 'border-brand-green bg-brand-green bg-opacity-10 text-brand-green'

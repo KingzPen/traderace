@@ -38,13 +38,13 @@ export default function DashboardPage() {
                 <path d="M1 7h9M7 3l5 4-5 4" stroke="#07090C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-display font-700 text-brand-bright">TradeRace</span>
+            <span className="font-display font-bold text-brand-bright">TradeRace</span>
           </div>
 
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-xs">
               <span className="dot-live" />
-              <span className="text-brand-green font-500">Live</span>
+              <span className="text-brand-green font-medium">Live</span>
               <span className="text-brand-muted">· MT5 connected</span>
             </div>
             <Link href="/settings" className="btn-ghost text-xs">
@@ -67,7 +67,7 @@ export default function DashboardPage() {
           ].map(s => (
             <div key={s.label} className="card-surface text-center p-4">
               <div className="text-lg mb-1">{s.icon}</div>
-              <div className="font-display font-600 text-xl text-brand-bright">{s.val}</div>
+              <div className="font-display font-semibold text-xl text-brand-bright">{s.val}</div>
               <div className="text-xs text-brand-muted mt-1">{s.label}</div>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function DashboardPage() {
         {/* Pit lane header */}
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="font-display font-600 text-brand-bright text-lg">Pit lane</h2>
+            <h2 className="font-display font-semibold text-brand-bright text-lg">Pit lane</h2>
             <p className="text-xs text-brand-muted mt-0.5">
               {trades.length === 0 ? 'No active races' : `${trades.length} race${trades.length > 1 ? 's' : ''} in progress`}
             </p>
@@ -90,7 +90,7 @@ export default function DashboardPage() {
         {trades.length === 0 ? (
           <div className="card text-center py-16">
             <div className="text-4xl mb-4">🏁</div>
-            <h3 className="font-display font-600 text-brand-bright mb-2">No active races</h3>
+            <h3 className="font-display font-semibold text-brand-bright mb-2">No active races</h3>
             <p className="text-brand-dim text-sm mb-6">Open a trade in MT5 — it'll appear here automatically.</p>
             <button onClick={() => setShowAdd(true)} className="btn-primary mx-auto">Log a trade manually</button>
           </div>
@@ -109,8 +109,8 @@ export default function DashboardPage() {
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-display font-700 text-brand-bright">{trade.symbol}</span>
-                        <span className={`text-xs font-mono font-500 ${trade.direction === 'BUY' ? 'text-brand-green' : 'text-brand-red'}`}>
+                        <span className="font-display font-bold text-brand-bright">{trade.symbol}</span>
+                        <span className={`text-xs font-mono font-medium ${trade.direction === 'BUY' ? 'text-brand-green' : 'text-brand-red'}`}>
                           {trade.direction}
                         </span>
                       </div>
@@ -119,7 +119,7 @@ export default function DashboardPage() {
                         <span className="text-xs text-brand-muted">Racing</span>
                       </div>
                     </div>
-                    <div className={`text-sm font-mono font-500 ${pnlPips >= 0 ? 'text-brand-green' : 'text-brand-red'}`}>
+                    <div className={`text-sm font-mono font-medium ${pnlPips >= 0 ? 'text-brand-green' : 'text-brand-red'}`}>
                       {pnlPips >= 0 ? '+' : ''}{pnlPips} pips
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                     ].map(f => (
                       <div key={f.label}>
                         <div className="text-xs text-brand-muted mb-0.5">{f.label}</div>
-                        <div className={`text-xs font-mono font-500 ${f.color ?? 'text-brand-text'}`}>{f.val}</div>
+                        <div className={`text-xs font-mono font-medium ${f.color ?? 'text-brand-text'}`}>{f.val}</div>
                       </div>
                     ))}
                   </div>
@@ -182,7 +182,7 @@ export default function DashboardPage() {
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12l3-4 3 3 3-5 3 2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </div>
             <div>
-              <div className="font-display font-500 text-sm text-brand-bright">Analytics</div>
+              <div className="font-display font-medium text-sm text-brand-bright">Analytics</div>
               <div className="text-xs text-brand-muted">Discipline score & patterns</div>
             </div>
           </Link>
@@ -191,7 +191,7 @@ export default function DashboardPage() {
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4c0 4 2.5 6.5 6 7.5 3.5-1 6-3.5 6-7.5V4L8 1z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/></svg>
             </div>
             <div>
-              <div className="font-display font-500 text-sm text-brand-bright">Broker settings</div>
+              <div className="font-display font-medium text-sm text-brand-bright">Broker settings</div>
               <div className="text-xs text-brand-muted">Manage MT5 connections</div>
             </div>
           </Link>

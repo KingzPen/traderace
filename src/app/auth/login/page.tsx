@@ -1,16 +1,16 @@
 'use client'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import toast from 'react-hot-toast'
 
-export default function LoginPage() {
+function LoginForm() {
   const params    = useSearchParams()
   const isSignup  = params.get('mode') !== 'login'
   const plan      = params.get('plan') ?? 'free'
 
-  const [email, setEmail]   = useState('')
-  const [sent, setSent]     = useState(false)
+  const [email, setEmail]     = useState('')
+  const [sent, setSent]       = useState(false)
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e: React.FormEvent) {
@@ -40,7 +40,7 @@ export default function LoginPage() {
             <path d="M4 14l7 7L24 7" stroke="#00E5A0" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
-        <h2 className="font-display font-700 text-2xl text-brand-bright mb-3">Check your inbox</h2>
+        <h2 className="font-display font-bold text-2xl text-brand-bright mb-3">Check your inbox</h2>
         <p className="text-brand-dim text-sm leading-relaxed mb-6">
           We sent a magic link to <strong className="text-brand-text">{email}</strong>.<br/>
           Click it to sign in — no password needed.
@@ -58,7 +58,7 @@ export default function LoginPage() {
   return (
     <div className="w-full max-w-sm">
       <div className="text-center mb-8">
-        <h1 className="font-display font-700 text-3xl text-brand-bright mb-2">
+        <h1 className="font-display font-bold text-3xl text-brand-bright mb-2">
           {isSignup ? 'Create your account' : 'Welcome back'}
         </h1>
         <p className="text-brand-dim text-sm">
@@ -133,5 +133,13 @@ export default function LoginPage() {
         <a href="#" className="hover:text-brand-text transition-colors">Privacy Policy</a>.
       </p>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
   )
 }
